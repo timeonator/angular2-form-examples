@@ -1,0 +1,27 @@
+{{diagnostic}}
+<div class="container">
+    <h1>Payment Method</h1>
+    <form #paymentMethodForm="ngForm">
+      <div class="form-group">
+        <label for="firstname">First Name</label>
+        <input type="text" [(ngModel)]="model.firstname" class="form-control" id="firstname" required  name="firstname">
+      </div>
+            <div class="form-group">
+        <label for="lastname">Last Name</label>
+        <input type="text" [(ngModel)]="model.lastname" class="form-control" id="lastname" required name="lastname" >
+      </div>
+      <div class="form-group">
+        <label for="accountnumber">Account Number On Card</label>
+        <input type="text" [(ngModel)]="model.accountnumber" class="form-control" id="account" required name="account">
+      </div>
+      <div class="form-group">
+        <label for="date">Expiration Date</label>
+        <input type="text" [(ngModel)]="model.date" class="form-control" id="date" required name="date"> 
+      </div>
+      <div class="form-group">
+        <label for="csv">CSV Number</label>
+        <input type="text" [(ngModel)]="model.cvv" class="form-control" id="csv" name="cvv">
+      </div>
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>

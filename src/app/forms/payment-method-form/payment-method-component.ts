@@ -10,7 +10,7 @@ import { PaymentMethod }    from '../../shared/models/paymentmethod';
 export class PaymentMethodFormComponent {
 
 
-  model = new PaymentMethod(18, '', '', '', '', '');
+  model = new PaymentMethod(0, '', '', '', '', '');
 
   submitted = false;
 
@@ -18,6 +18,10 @@ export class PaymentMethodFormComponent {
      this.submitted = true;
 
  }
+ newPaymentMethod() {
+  this.model = new PaymentMethod(0, '', '','','','');
+  this.submitted = false;
+}
 
   // TODO: Remove this when we're done
   get diagnostic() { return JSON.stringify(this.model); }

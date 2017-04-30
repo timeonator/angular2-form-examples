@@ -1,7 +1,7 @@
 {{diagnostic}}
 <div class="container">
     <h1>Payment Method</h1>
-    <form #paymentMethodForm="ngForm">
+    <form (ngSubmit)="onSubmit()" #paymentMethodForm="ngForm">
 
       <div class="form-group">
         <label for="firstname">First Name</label>
@@ -58,6 +58,7 @@
             CVV is required
         </div>
       </div>
-      <button type="submit" class="btn btn-success">Submit</button>
+      <button type="submit" class="btn btn-success" [disabled]="!paymentMethodForm.form.valid">Submit</button>
+      <button type="button" class="btn btn-default" (click)="newPaymentMethod(); paymentMethodForm.reset()">New Payment Method</button>
     </form>
 </div>

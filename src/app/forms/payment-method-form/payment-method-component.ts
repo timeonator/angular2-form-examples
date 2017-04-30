@@ -10,7 +10,7 @@ import { PaymentMethod }    from '../../shared/models/paymentmethod';
 export class PaymentMethodFormComponent {
 
 
-  model = new PaymentMethod(18, 'Dr', 'Doom', 'lumihlue', 'Chuck Overstreet', 'a');
+  model = new PaymentMethod(18, '', '', '', '', '');
 
   submitted = false;
 

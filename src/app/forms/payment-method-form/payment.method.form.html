@@ -2,25 +2,61 @@
 <div class="container">
     <h1>Payment Method</h1>
     <form #paymentMethodForm="ngForm">
+
       <div class="form-group">
         <label for="firstname">First Name</label>
-        <input type="text" [(ngModel)]="model.firstname" class="form-control" id="firstname" required  name="firstname">
+        <input type="text" class="form-control" id="firstname" 
+        required
+        [(ngModel)]="model.firstname" name="firstname" #firstname="ngModel">
+        <div [hidden]="firstname.valid || firstname.pristine"
+             class="alert alert-danger">
+          First Name is required
+        </div>
       </div>
-            <div class="form-group">
+
+      <div class="form-group">
         <label for="lastname">Last Name</label>
-        <input type="text" [(ngModel)]="model.lastname" class="form-control" id="lastname" required name="lastname" >
+        <input type="text"  class="form-control" id="lastname" 
+        required 
+        [(ngModel)]="model.lastname" name="lastname" #lastname="ngModel" >
+                <div [hidden]="lastname.valid || lastname.pristine"
+             class="alert alert-danger">
+          Last Name is required
+        </div>
       </div>
+
       <div class="form-group">
         <label for="accountnumber">Account Number On Card</label>
-        <input type="text" [(ngModel)]="model.accountnumber" class="form-control" id="account" required name="account">
+        <input type="text"  class="form-control" id="account" 
+          required
+          [(ngModel)]="model.accountnumber" name="account" #accountnumber="ngModel">
+          <div [hidden]="accountnumber.valid || accountnumber.pristine"
+             class="alert alert-danger">
+          Account Number is required
+        </div>
       </div>
+      
       <div class="form-group">
         <label for="date">Expiration Date</label>
-        <input type="text" [(ngModel)]="model.date" class="form-control" id="date" required name="date"> 
+        <input type="text"  class="form-control" id="date"
+         required
+         [(ngModel)]="model.date" name="date" #date="ngModel"> 
+        <div [hidden]="date.valid || date.pristine"
+             class="alert alert-danger">
+          Expiration Date Required is required
+        </div>
       </div>
+
       <div class="form-group">
-        <label for="csv">CSV Number</label>
-        <input type="text" [(ngModel)]="model.cvv" class="form-control" id="csv" name="cvv">
+        <label for="csv">CVV Number</label>
+        <input type="text"  class="form-control" id="csv" 
+          required
+          [(ngModel)]="model.cvv"  name="cvv"
+          #cvv="ngModel">
+        <div [hidden]="cvv.valid || cvv.pristine"
+             class="alert alert-danger">
+            CVV is required
+        </div>
       </div>
       <button type="submit" class="btn btn-success">Submit</button>
     </form>

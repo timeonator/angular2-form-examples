@@ -46,19 +46,23 @@
           Expiration Date Required is required
         </div>
       </div>
-
-      <div class="form-group">
+      <div class="col-xs-9"></div>
+ 
+      <div class="form-group col-xs-3">
         <label for="csv">CVV Number</label>
         <input type="text"  class="form-control" id="csv" 
           required
+          maxlength=3 
           [(ngModel)]="model.cvv"  name="cvv"
           #cvv="ngModel">
+        </div>
         <div [hidden]="cvv.valid || cvv.pristine"
              class="alert alert-danger">
             CVV is required
         </div>
-      </div>
+
       <button type="submit" class="btn btn-success" [disabled]="!paymentMethodForm.form.valid">Submit</button>
       <button type="button" class="btn btn-default" (click)="newPaymentMethod(); paymentMethodForm.reset()">New Payment Method</button>
+
     </form>
 </div>

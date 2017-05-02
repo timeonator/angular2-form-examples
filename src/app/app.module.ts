@@ -4,7 +4,7 @@ import { FormsModule} from '@angular/forms';
 
 import { AppComponent }  from './app.component';
 import { PaymentMethodFormComponent } from './forms/payment-method-form/payment-method-component'
-
+import { ProfileFormComponent } from './forms/profile-form/profile.component';
 @NgModule({
   imports: [ 
     BrowserModule,
@@ -12,7 +12,8 @@ import { PaymentMethodFormComponent } from './forms/payment-method-form/payment-
    ],
   declarations: [ 
     AppComponent,
-    PaymentMethodFormComponent
+    PaymentMethodFormComponent,
+    ProfileFormComponent
   ],
   bootstrap:    [ AppComponent ]
 })

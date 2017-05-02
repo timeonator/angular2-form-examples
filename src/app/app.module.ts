@@ -10,7 +10,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'ProfileFormComponent', pathMatch: 'full' },   
+  { path: '', redirectTo: ProfileFormComponent, pathMatch: 'full' },   
   { path: 'profile', component: ProfileFormComponent },
   { path: 'account', component: PaymentMethodFormComponent }
 ];

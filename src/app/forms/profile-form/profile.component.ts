@@ -19,7 +19,7 @@ export class ProfileFormComponent {
 
  }
  newProfile() {
-  this.model = new Profile(0, 0, '',);
+  this.model = new Profile(0, 0, '','');
   this.submitted = false;
 }
 
